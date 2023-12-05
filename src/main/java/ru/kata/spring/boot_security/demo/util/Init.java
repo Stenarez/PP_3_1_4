@@ -7,7 +7,7 @@ import ru.kata.spring.boot_security.demo.service.RoleServiceImpl;
 import ru.kata.spring.boot_security.demo.service.UserServiceImpl;
 
 import javax.annotation.PostConstruct;
-import java.util.List;
+import java.util.Set;
 
 @Component
 public class Init {
@@ -23,7 +23,7 @@ public class Init {
     public void init() {
         Role admin = new Role("ROLE_ADMIN");
         Role user = new Role("ROLE_USER");
-        List<Role> adminSet = List.of(admin);
+        Set<Role> adminSet = Set.of(admin);
         roleService.addRole(admin);
         roleService.addRole(user);
 
